@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "311854696598",
+    "project_id": "iscaechat",
+    "storage_bucket": "iscaechat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311854696598:android:7e5a6a8f8b8eefc5551ab7",
+        "android_client_info": {
+          "package_name": "mr.vadel.iscae_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311854696598-sds617dkkbthqp9iggq27476sj2nhas0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdHkQYONXRlf8Q1KQFWCdyl395F8HcsZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311854696598-sds617dkkbthqp9iggq27476sj2nhas0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
