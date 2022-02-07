@@ -126,6 +126,8 @@ class _CreateAccountState extends State<CreateAccount> {
               setState(() {
                 isLoading = false;
               });
+
+              user.sendEmailVerification();
               Navigator.push(
                   context, MaterialPageRoute(builder: (_) => HomeScreen()));
               print("Account Created Sucessfull");
