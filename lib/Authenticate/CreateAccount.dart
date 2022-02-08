@@ -2,6 +2,7 @@ import 'package:iscae_chat/Authenticate/Methods.dart';
 import 'package:flutter/material.dart';
 
 import '../Screens/HomeScreen.dart';
+import 'LoginScree.dart';
 
 class CreateAccount extends StatefulWidget {
   @override
@@ -13,6 +14,35 @@ class _CreateAccountState extends State<CreateAccount> {
   final TextEditingController _email = TextEditingController();
   final TextEditingController _password = TextEditingController();
   bool isLoading = false;
+
+  showAlertDialog(BuildContext context) {
+    // set up the button
+    Widget okButton = TextButton(
+      child: Text("OK"),
+      onPressed: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (_) => LoginScreen()));
+      },
+    );
+
+    // set up the AlertDialog
+    AlertDialog alert = AlertDialog(
+      title: Text("Verify your Account"),
+      content: Text(
+          "We have sent a verification link to the mail adress you provided, Click on it so you can log in to your account."),
+      actions: [
+        okButton,
+      ],
+    );
+
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -128,9 +158,13 @@ class _CreateAccountState extends State<CreateAccount> {
               });
 
               user.sendEmailVerification();
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => HomeScreen()));
-              print("Account Created Sucessfull");
+              //=====================================================================================
+              //=====================================================================================
+
+              showAlertDialog(context);
+              //=====================================================================================
+              //=====================================================================================
+
             } else {
               print("Login Failed");
               setState(() {
